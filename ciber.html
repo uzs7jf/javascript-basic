@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic - Javascript exercises</title>
+    </head>
+    <body>
+        
+        <script>
+        // 1. exercise: crear un fitxer anomenat ciber.html i mostrar per consola un 'Hola mundo' 
+            
+            console.log("Hello World!");
+        
+        // 2. exercise: Crea un alert que mostri el teu nom:
+        
+            alert("Me llamo Ismael Nieto");
+     
+        // 3. exercise: Crea una variable que contingui el teu nom i un altre que contingui el teu cognom.
+     
+            var firstName = "Ismael";
+            var lastName = "Nieto";
+            console.log(firstName + ' ' + lastName);
+      
+        // 4. exercise: Crea dos variables amb dos números i fes una suma entre ells. 
+   
+            var number_one = 10;
+            var number_two = 5;
+            console.log(`la suma entre ${number_one} y ${number_two} da como resultado: `,  + number_one + number_two);
+    
+        // 5. exercise: Crea una variable nota_examen juntament amb un alert que ens digui si l’examen ha estat 
+        //    aprovat o no juntament amb la nota.  
+        
+            var nota_examen = 5.1;
+
+            if (nota_examen >= 5){
+                alert(`El examen está aprobado: ${nota_examen}`);
+            } else {
+                alert(`Con este resultado, ${nota_examen}, el examen está suspendido.`);
+            }
+
+         // 6. exercise:  Reemplaça la paraula blau per la paraula verd del següent text
+         // Tinc un cotxe de color blau. Després intenta fer-ho remplaçant les o per les u.
+            
+            var text = "Tinc un cotxe de color blau.";
+            var new_text = text.replace("blau", "verd"); 
+            new_text = new_text.replace(/o/g, "u");
+            console.log(new_text);
+        
+        // 7. exercise: Donat el seguit llistat d'objectes 'taula', 'cadira', 'ordinador', 
+        // 'libreta', per un bucle que mostri per pantalla cada objecte i la seva posició al llistat.
+
+            var lista = ['taula', 'cadira', 'ordinador', 'libreta']
+
+            for (let i in lista){
+                document.write(`\"${lista[i]}\" está en la posición ${i}.<br>`);
+            }
+
+
+        // 8. Exercise: Crea una funció anomenada calculadora que tingui com a entrada els següents paràmetres: 
+        // operador, valor1 i valor2. Estructura de la funció que faci sumes, restes i multiplicacions. El resultat
+        // haurà de ser mostrar per pantalla.
+
+            function calculadora( operation, firstNumber, secondNumber) {
+	            
+                    switch(operation){
+                        case "resta":
+                            document.write(`${firstNumber} - ${secondNumber} = ${firstNumber - secondNumber}`);
+                            break;
+                        case "suma":
+                            document.write(`${firstNumber} + ${secondNumber} = ${firstNumber + secondNumber}`);
+                            break;
+                        case "multiplicacion":
+                            document.write(`${firstNumber} * ${secondNumber} = ${firstNumber * secondNumber}`);
+                            break;
+                        case "division":
+                            document.write(`${firstNumber} / ${secondNumber} = ${firstNumber / secondNumber}`);
+                            break;
+                    }
+            }
+	            
+            var resultat = calculadora('suma',40,20);
+            
+
+        </script>
+    </body>
+</html>
