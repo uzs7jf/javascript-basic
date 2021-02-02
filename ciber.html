@@ -71,14 +71,52 @@
                         case "multiplicacion":
                             document.write(`${firstNumber} * ${secondNumber} = ${firstNumber * secondNumber}`);
                             break;
-                        case "division":
-                            document.write(`${firstNumber} / ${secondNumber} = ${firstNumber / secondNumber}`);
-                            break;
                     }
             }
 	            
-            var resultat = calculadora('suma',40,20);
+            var resultat = calculadora('division', 10, 3)
             
+        //  Nivell 2 . 1. Exercise: Aprofita la funció "calculadora" de l'exercici anterior per crear una calculadora completa amb opcions per sumar, 
+        // Aprofita la funció "calculadora" de l'exercici anterior per crear una calculadora completa amb opcions per sumar, restar, multiplicar i dividir. 
+        // Hauràs de controlar el Zero com a denominador d'una divisió.
+
+            function calculadora( operation, firstNumber, secondNumber) {
+	            
+                switch(operation){
+                    case "resta":
+                        document.write(`${firstNumber} - ${secondNumber} = ${firstNumber - secondNumber}`);
+                        break;
+                    case "suma":
+                        document.write(`${firstNumber} + ${secondNumber} = ${firstNumber + secondNumber}`);
+                        break;
+                    case "multiplicacion":
+                        document.write(`${firstNumber} * ${secondNumber} = ${firstNumber * secondNumber}`);
+                        break;
+                    case "division":
+                        if (secondNumber !== 0){
+                            document.write(`!!!!${firstNumber} / ${secondNumber} = ${firstNumber / secondNumber}`);
+                            break;
+                        } else {
+                            alert("Lo sentimos, pero está intentando dividir por 0. No es posible. ");
+                            let n = prompt("Por favor, introduza un número positivo o negativo: ");
+                            secondNumber = parseFloat(n)
+                            if (secondNumber !== 0){
+                                document.write(`${firstNumber} / ${secondNumber} = ${firstNumber / secondNumber}`);
+                                break;
+                            } else {
+                                document.write("La operación no ha podido ser realizada");
+                                break;
+                            }
+                        }
+                }
+        }
+            
+            var resultat = calculadora('division', 10, 0)
+
+        
+        //  Nivell 3 . 1. Exercise: Ara evolucionarem el nivell 2: Crearem una interfície gràfica per tal de fer la calculadora més usable. 
+        // El disseny és totalment lliure, intenta sorprendre al teu mentor.
+
 
         </script>
     </body>
