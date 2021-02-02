@@ -116,7 +116,56 @@
         
         //  Nivell 3 . 1. Exercise: Ara evolucionarem el nivell 2: Crearem una interfície gràfica per tal de fer la calculadora més usable. 
         // El disseny és totalment lliure, intenta sorprendre al teu mentor.
+            function suma(x, y) {
+                return x + y;
+            }
 
+            function resta(x, y) {
+                return x - y;
+            }
+
+            function multiplicacion(x, y) {
+                return x * y;
+            }
+
+            function division(x, y) {
+                return x / y;
+            }
+
+            function print(result){
+               document.write(result);
+            }
+
+            function main(){
+                let exit = false;
+                let result = 0;
+
+                let n = prompt("Por favor, introduza un número: ");
+                let m = prompt("Por favor, introduza otro: ");
+                let o = prompt("¿Que operacion quiere realizar: +, -, * o / ");
+
+                while (exit != true){
+                    switch(operation){
+                        case "-":
+                            resultado = resta(n, m);
+                            imprimir(resultado)
+                            break;
+                        case "+":
+                            resultado =suma(n, m);
+                            imprimir(resultado)
+                            break;
+                        case "*":
+                            resultado = multiplicacion(n, m);
+                            imprimir(resultado)
+                            break;
+                        case "/":
+                            resultado = division(n, m);
+                            imprimir(resultado)
+                            break;
+                    }
+                }
+            }
+            main();
 
         </script>
     </body>
