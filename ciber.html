@@ -59,114 +59,114 @@
         // operador, valor1 i valor2. Estructura de la funció que faci sumes, restes i multiplicacions. El resultat
         // haurà de ser mostrar per pantalla.
 
-            function calculadora( operation, firstNumber, secondNumber) {
+            function calculador(operation, firstNumber, secondNumber) {
 	            
                     switch(operation){
-                        case "resta":
+                        case "-":
                             document.write(`${firstNumber} - ${secondNumber} = ${firstNumber - secondNumber}`);
                             break;
-                        case "suma":
+                        case "+":
                             document.write(`${firstNumber} + ${secondNumber} = ${firstNumber + secondNumber}`);
                             break;
-                        case "multiplicacion":
+                        case "*":
                             document.write(`${firstNumber} * ${secondNumber} = ${firstNumber * secondNumber}`);
                             break;
                     }
             }
 	            
-            var resultat = calculadora('division', 10, 3)
+            let resultat = calculador('division', 10, 3)
             
         //  Nivell 2 . 1. Exercise: Aprofita la funció "calculadora" de l'exercici anterior per crear una calculadora completa amb opcions per sumar, 
         // Aprofita la funció "calculadora" de l'exercici anterior per crear una calculadora completa amb opcions per sumar, restar, multiplicar i dividir. 
         // Hauràs de controlar el Zero com a denominador d'una divisió.
 
-            function calculadora( operation, firstNumber, secondNumber) {
+            function calculadora(operation, firstNumber, secondNumber) {
 	            
                 switch(operation){
-                    case "resta":
+                    case "-":
                         document.write(`${firstNumber} - ${secondNumber} = ${firstNumber - secondNumber}`);
                         break;
-                    case "suma":
+                    case "+":
                         document.write(`${firstNumber} + ${secondNumber} = ${firstNumber + secondNumber}`);
                         break;
-                    case "multiplicacion":
+                    case "*":
                         document.write(`${firstNumber} * ${secondNumber} = ${firstNumber * secondNumber}`);
                         break;
-                    case "division":
+                    case "/":
                         if (secondNumber !== 0){
-                            document.write(`!!!!${firstNumber} / ${secondNumber} = ${firstNumber / secondNumber}`);
+                            document.write(`${firstNumber} / ${secondNumber} = ${firstNumber / secondNumber}`);
                             break;
                         } else {
-                            alert("Lo sentimos, pero está intentando dividir por 0. No es posible. ");
-                            let n = prompt("Por favor, introduza un número positivo o negativo: ");
-                            secondNumber = parseFloat(n)
-                            if (secondNumber !== 0){
-                                document.write(`${firstNumber} / ${secondNumber} = ${firstNumber / secondNumber}`);
-                                break;
-                            } else {
-                                document.write("La operación no ha podido ser realizada");
-                                break;
-                            }
+                            document.write("La operación no ha podido ser realizada");
+                            break;
                         }
                 }
-        }
+            }
             
-            var resultat = calculadora('division', 10, 0)
-
-        
-        //  Nivell 3 . 1. Exercise: Ara evolucionarem el nivell 2: Crearem una interfície gràfica per tal de fer la calculadora més usable. 
-        // El disseny és totalment lliure, intenta sorprendre al teu mentor.
-            function suma(x, y) {
-                return x + y;
-            }
-
-            function resta(x, y) {
-                return x - y;
-            }
-
-            function multiplicacion(x, y) {
-                return x * y;
-            }
-
-            function division(x, y) {
-                return x / y;
-            }
-
-            function print(result){
-               document.write(result);
-            }
-
-            function main(){
-                let exit = false;
-                let result = 0;
-
-                let n = prompt("Por favor, introduza un número: ");
-                let m = prompt("Por favor, introduza otro: ");
-                let o = prompt("¿Que operacion quiere realizar: +, -, * o / ");
-
-                while (exit != true){
-                    switch(operation){
-                        case "-":
-                            resultado = resta(n, m);
-                            imprimir(resultado)
-                            break;
-                        case "+":
-                            resultado =suma(n, m);
-                            imprimir(resultado)
-                            break;
-                        case "*":
-                            resultado = multiplicacion(n, m);
-                            imprimir(resultado)
-                            break;
-                        case "/":
-                            resultado = division(n, m);
-                            imprimir(resultado)
-                            break;
-                    }
-                }
-            }
-            main();
-
+            let result = calculador('division', 10, 0)
         </script>
     </body>
 </html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora</title>
+    <script>
+
+    //  Nivell 3 . 1. Exercise: Ara evolucionarem el nivell 2: Crearem una interfície gràfica per tal de fer la calculadora més usable. 
+    // El disseny és totalment lliure, intenta sorprendre al teu mentor.
+
+       function calculator(operator){
+
+            let x = document.getElementById("num1").value;
+            let y = document.getElementById("num2").value;
+            let operation = operator;
+            let result = 0;
+
+            switch(operation){
+                case "-":
+                    result = parseFloat(x) - parseFloat(y);
+                    break;
+                case "+":
+                    result = parseFloat(x) + parseFloat(y);       
+                    break;
+                case "*":
+                    result = parseFloat(x) * parseFloat(y);       
+                    break;
+                case "/":
+                    result = parseFloat(x) / parseFloat(y);        
+                    break;
+            }
+            document.getElementById('result').value=result;        
+        }
+    </script>
+</head>
+<body>
+
+    <h1>My calculator</h1>
+    <table border="1" cellpadding="5" cellspacing="5" width="600">
+    <tr align="center">
+    <td>First number</td>
+    <td>Second Number</td>
+    <td>Result</td>
+    </tr>
+    <tr align="center">
+    <td><input name="numberOne" type="text" size=10 id='num1'/></td>
+    <td><input name="numberTwo" type="text" size=10 id='num2'/></td>
+    <td> <input type="text" id='result' readonly ></td>
+    </tr>
+    <tr>
+    <td colspan="3">
+    <button onclick="calculator('+')">+</button>
+    <button onclick="calculator('-')">-</button>
+    <button onclick="calculator('*')">*</button>
+    <button onclick="calculator('/')">/</button>
+
+    </td>
+    </tr>
+    
+    </table>
+    </body>
+    </html>
