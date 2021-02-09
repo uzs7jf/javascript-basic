@@ -136,8 +136,13 @@
                     result = parseFloat(x) * parseFloat(y);       
                     break;
                 case "/":
-                    result = parseFloat(x) / parseFloat(y);        
-                    break;
+                    if (y !== 0){
+                            result = parseFloat(x) / parseFloat(y);    
+                            break;
+                        } else {
+                            result = "Undefined result";
+                            break;
+                        }                      
             }
             document.getElementById('result').value=result;        
         }
