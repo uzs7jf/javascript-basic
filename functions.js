@@ -39,10 +39,10 @@ const print_numbers = function (n) {
     }
     return;
 }
-const num = 9;
-const arr = Array(num);
-for (let i = 0; i<= num; i++) {
-    arr[i] = print_numbers(num);
+const numFunctions = 10;
+const arr = Array(numFunctions);
+for (let i = 0; i<= numFunctions; i++) {
+    arr[i] = print_numbers(numFunctions);
 }
 
 /*
