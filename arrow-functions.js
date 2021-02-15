@@ -12,8 +12,7 @@ Nivell 2
 */
 
 const retunrObj = (word)=>  newObjt = {greetings: word};
-retunrObj("Good Morning")
-
+console.log(retunrObj("Good Morning"))
 /*
 Exercici 2
 - Crear una classe Persona que rebi un paràmetre 'nom' a l'ésser creat.
@@ -31,3 +30,8 @@ class Person{
 }
 let persona = new Person("Julio Iglesias");
 persona.decirNombre
+
+/* Nivell 3
+    - Exercici 1
+    Crear una function creadora d'objectes, abstraient la definició de les classes. Invocar-amb diferents definicions.
+*/
