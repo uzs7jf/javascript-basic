@@ -49,8 +49,8 @@ for (let i = 0; i<= numFunctions; i++) {
 - Exercici 2
 Crear una funció anònima autoinvocable (igualada a una variable) que imprimeixi per pantalla el nom d'usuari rebut com a paràmetre
 */
-const newVariable = (function UserName(user){
-    console.log(user)
+(function UserName(user){
+    document.write(user);
 })(prompt("Introduzca su nombre: "))   
         
     
