@@ -6,15 +6,16 @@ o bé reject() que rep. Invocar-la des de fora pasandole totes dues funcions que
  un missatge diferent en cada cas.
 */
 
-const promise = new Promise((resolve, reject) => {
-        let randomNumber = Math.floor(Math.random() * 5); // Return interger between 0 and 5
-        if(randomNumber > 2){
-            resolve("success");
+const promise = () => {
+    return new Promise((resolve, reject) => {
+        const randomNumber = Math.floor(Math.random() * 11); // Return interger between 0 and 5
+        if(randomNumber > 5){
+            resolve();
         } else {
-            reject("error");
+            reject();
         }
     });
+};
 
-
-promise.then(()=> console.log("mas de 2"))
-       .catch(()=> console.log("menos de 2"))
+promise().then(()=> console.log("You pass the exercise."))
+       .catch(()=> console.log("Ups, you should try the exercise again"))
