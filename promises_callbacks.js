@@ -18,4 +18,17 @@ const promise = () => {
 };
 
 promise().then(()=> console.log("You pass the exercise."))
-       .catch(()=> console.log("Ups, you should try the exercise again"))
+         .catch(()=> console.log("Ups, you should try the exercise again"))
+/* - Exercici 2
+Crear una arrow function que, rebent un paràmetre i una function callback, 
+li passi a la funció un missatge o un altre (que s'imprimirà per consola) en funció del paràmetre.
+ */
+
+const myCallBack = function(n){
+    total = (n  + 4 );
+    console.log(`el resultado es ${total}`);
+}
+
+const myArrowFunction = (x, callback)=> callback(x)
+
+myArrowFunction(11, myCallBack);
