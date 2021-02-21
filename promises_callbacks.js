@@ -22,8 +22,8 @@ promise()
     .catch(() => console.log("Ups, you should try the exercise again"))
 
 /* - Exercici 2
-Crear una arrow function que, rebent un paràmetre i una function callback, 
-li passi a la funció un missatge o un altre (que s'imprimirà per consola) en funció del paràmetre.
+    Crear una arrow function que, rebent un paràmetre i una function callback, 
+    li passi a la funció un missatge o un altre (que s'imprimirà per consola) en funció del paràmetre.
  */
 
 const myCallBack = function (n) {
@@ -37,9 +37,8 @@ myArrowFunction(11, myCallBack);
 
 /*Nivell 2
 - Exercici 1
-Donats els objectes employees i salaries, creu una arrow function getEmpleado 
-que retorni una Promise efectuant la cerca en l'objecte pel seu id.
-
+    Donats els objectes employees i salaries, creu una arrow function getEmpleado 
+    que retorni una Promise efectuant la cerca en l'objecte pel seu id.
  */
 
 let employees = [
@@ -59,16 +58,15 @@ const getEmpleado = (numberID) => {
     });
 }
 
-/* let empleadoID = 2
+let empleadoID = 2
 getEmpleado(empleadoID)
-    //.then((val) => console.log(`Employee found: ${JSON.stringify(val)}`))
-    .then((val) => val)
-    .catch(() => console.log("Ups, no employee here!")) */
+    .then(() => console.log("Employee works here"))
+    .catch(() => console.log("Ups, no employee here!")) 
+
 
 /*Exercici 2
 Creu una altra arrow function getSalario que rebi com a paràmetre un objecte employee i retorni el seu salari.
 */
-
 let salaries = [
     { id: 1, salary: 4000 },
     { id: 2, salary: 1000 },
@@ -87,7 +85,7 @@ const getSalario = (obj) => {
         });
 }
     
-getSalario(employees[1])
-    .then((salary) => console.log(salary))
+getSalario(employees[2])
+    .then((salary) => console.log(`Employee has that salary: ${salary}`))
     .catch(() => console.log("Ups. No employee found"))
 
