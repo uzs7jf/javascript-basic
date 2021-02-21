@@ -42,5 +42,23 @@ const getSalario = (obj) => {
 let empleado = 1;
 
 getEmpleado(empleado)
-    .then((w) => getSalario(w))
-    .catch(() => console.log("No Id and no salary found"))
+    .then((worker) => {
+        console.log(`Employee ${worker.name} found!`);
+        return worker
+    })
+    .then((worker) => getSalario(worker))
+    .then((salary) => console.log(`Employee has that salary: ${salary}`))
+    .catch(() => console.log("Neither id and nor salary found."))
+
+/* 
+- Exercici 2
+    Creu una funció asíncrona que, rebent un id d'empleat, imprimeixi per pantalla el nom de l'empleat i el seu salari
+ */
+
+ async function employee(n){
+
+        let worker =  getEmpleado();
+        let salary = getSalario(worker);
+        console.log(`${worker.name} get every month following salary ${salary}`)
+
+ }
