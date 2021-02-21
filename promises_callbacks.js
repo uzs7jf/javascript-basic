@@ -75,22 +75,19 @@ let salaries = [
     { id: 3, salary: 2000 }
 ];
 
-
 const getSalario = (obj) => {
 
-    return new Promise((resolve, reject) => {
-        let isSalary = salaries.find(x => x.id === obj.id);
-        //console.log("salri", isSalary.salary);
-        if (isSalary) {
-            revolve(isSalary.salary);
-        } else {
-            reject();
-        } 
-    });
-
+    return new Promise(function(resolve, reject) {
+            let isSalary = salaries.find(x => x.id === obj.id);
+            if (isSalary.id) {
+                resolve(isSalary.salary);
+            } else {
+                reject();
+            }
+        });
 }
     
 getSalario(employees[1])
     .then((salary) => console.log(salary))
-    .catch(() => console.log("Ups, no salary found!!!"))
+    .catch(() => console.log("Ups. No employee found"))
 
