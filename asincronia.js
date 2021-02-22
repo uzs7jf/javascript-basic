@@ -39,7 +39,7 @@ const getSalario = (obj) => {
         });
 }
     
-let empleado = 1;
+/* let empleado = 1;
 
 getEmpleado(empleado)
     .then((worker) => {
@@ -48,7 +48,7 @@ getEmpleado(empleado)
     })
     .then((worker) => getSalario(worker))
     .then((salary) => console.log(`Employee has that salary: ${salary}`))
-    .catch(() => console.log("Neither id and nor salary found."))
+    .catch(() => console.log("Neither id and nor salary found.")) */
 
 /* 
 - Exercici 2
@@ -57,8 +57,9 @@ getEmpleado(empleado)
 
  async function employee(n){
 
-        let worker =  getEmpleado();
-        let salary = getSalario(worker);
+        let worker = await getEmpleado(n);
+        let salary = await getSalario(worker);
         console.log(`${worker.name} get every month following salary ${salary}`)
 
  }
+ employee(2);
