@@ -39,7 +39,7 @@ const getSalario = (obj) => {
         });
 }
     
-/* let empleado = 1;
+let empleado = 1;
 
 getEmpleado(empleado)
     .then((worker) => {
@@ -48,7 +48,7 @@ getEmpleado(empleado)
     })
     .then((worker) => getSalario(worker))
     .then((salary) => console.log(`Employee has that salary: ${salary}`))
-    .catch(() => console.log("Neither id and nor salary found.")) */
+    .catch(() => console.log("Neither id and nor salary found."))
 
 /* 
 - Exercici 2
@@ -63,3 +63,9 @@ getEmpleado(empleado)
 
  }
  employee(2);
+
+
+ /* Nivell 2
+- Exercici 1
+Creu una funció asíncrona que anomeni a una altra que retorni una Promise que efectuï la seva resolve amb una demora de 2 segons.
+ */
