@@ -80,3 +80,23 @@ Creu una funció asíncrona que anomeni a una altra que retorni una Promise que 
  }
 
  delay();
+
+/* Nivell 3
+- Exercici 1
+Capturi tots els errors possibles del Nivell 2.
+ */
+
+async function otroDelay(){
+
+    return await new Promise((resolve, reject) => {
+        try{ 
+            setTimeout(()=> {
+                console.log("Esto aún mucho más tarde");
+            }, 3000);
+        }catch(error){
+            console.log(error);
+        }
+    });
+ }
+
+ otroDelay();
