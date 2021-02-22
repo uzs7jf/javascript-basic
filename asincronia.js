@@ -69,3 +69,14 @@ getEmpleado(empleado)
 - Exercici 1
 Creu una funció asíncrona que anomeni a una altra que retorni una Promise que efectuï la seva resolve amb una demora de 2 segons.
  */
+
+ async function delay(){
+
+    return await new Promise((resolve, reject) => {
+        setTimeout(()=> {
+            console.log("Esto se imprimirá más tarde");
+        }, 2000);
+        });
+ }
+
+ delay();
