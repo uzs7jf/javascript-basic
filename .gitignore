@@ -9,7 +9,8 @@
 test.py
 test.html
 test.R
-test.css 
+test.css
+test.js
 
 # Node artifact files
 node_modules/

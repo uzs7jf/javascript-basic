@@ -3,7 +3,7 @@
 - Imprimir per pantalla el resultat d'una arrow function autoinvocable que sumi dos nombres.
 */
 
-(() => {document.write(2 + 3)})();
+(() => { console.log(2 + 3) })();
 
 /* 
 Nivell 2
@@ -29,7 +29,7 @@ class Person{
     }
 }
 let persona = new Person("Julio Iglesias");
-persona.decirNombre
+persona.decirNombre;
 
 /* Nivell 3
     - Exercici 1
